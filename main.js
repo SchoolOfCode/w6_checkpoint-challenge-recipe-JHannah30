@@ -47,23 +47,34 @@ async function fetchRecipe(food) {
 
 async function getRecipes() {
   const getRecipe = await fetchRecipe(foodToSearch);
+  // First recipe //
   featuredRecipeImage.src = getRecipe.hits[0].recipe.image;
   featuredRecipeTitle.innerText = getRecipe.hits[0].recipe.label;
   featuredRecipeAuthor.innerText = getRecipe.hits[0].recipe.source;
   featuredRecipeButton.href = getRecipe.hits[0].recipe.url;
-  getAdditionalRecipes();
+  // Second recipe //
+  recipeImage2.src = getRecipe.hits[1].recipe.image;
+  recipeTitle2.innerText = getRecipe.hits[1]. recipe.label;
+  recipeAuthor2.innerText = getRecipe.hits[1].recipe.source;
+  recipeButton2.href = getRecipe.hits[1].recipe.url;
+  // Third recipe //
+  recipeImage3.src = getRecipe.hits[2].recipe.image;
+  recipeTitle3.innerText = getRecipe.hits[2]. recipe.label;
+  recipeAuthor3.innerText = getRecipe.hits[2].recipe.source;
+  recipeButton3.href = getRecipe.hits[2].recipe.url;
+  // Fourth recipe //
+  recipeImage4.src = getRecipe.hits[3].recipe.image;
+  recipeTitle4.innerText = getRecipe.hits[3]. recipe.label;
+  recipeAuthor4.innerText = getRecipe.hits[3].recipe.source;
+  recipeButton4.href = getRecipe.hits[3].recipe.url;
+  // Fifth recipe //
+  recipeImage5.src = getRecipe.hits[4].recipe.image;
+  recipeTitle5.innerText = getRecipe.hits[4]. recipe.label;
+  recipeAuthor5.innerText = getRecipe.hits[4].recipe.source;
+  recipeButton5.href = getRecipe.hits[4].recipe.url;
 }
 
-// Problems: can't insert number into variable name. Unable to access getRecipe variable. 
-async function getAdditionalRecipes() {
-  for(let i = 1; i < 5; i++){
-    recipeImage[i].src = getRecipe.hits[i].recipe.image;
-    recipeTitle[i].innerText = getRecipe.hits[i].recipe.label;
-    recipeAuthor[i].innerText = getRecipe.hits[i].recipe.source;
-    recipeButton[i].href = getRecipe.hits[i].recipe.url;
-  }
-}
-
+/* INFORMATION AVAILABLE FROM API */
 // hits[0].recipe.label
 // hits[0].recipe.image
 // hits[0].recipe.source

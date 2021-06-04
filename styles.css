@@ -1,4 +1,4 @@
-header{
+header {
     height: 40vh;
     background-image: url("images/header-ingredients.png");
     background-position: center;
@@ -7,38 +7,52 @@ header{
     position: relative;
 }
 
-body{
+body {
     margin: 0;
 }
 
-main{
+main {
     width: 80%;
     margin: 0 auto;
 }
 
-h1{
+h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 6vw;
 }
 
-h2{
+h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 3vw;
 }
 
-.hero-text{
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hero-text {
     text-align: center;
     color: white;
     padding: 15%;
 }
 
-#recipe-section{
+#recipe-section {
     text-align: center;
 }
 
-#fancy-title{
+#fancy-title {
     font-family: Pacifico;
     color: #FFA455;
     line-height: 0;
