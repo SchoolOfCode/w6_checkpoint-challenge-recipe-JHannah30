@@ -3,21 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fetch</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:800|Pacifico">
+    <title>Jamie's Recipe Generator</title>
   </head>
   <body>
-    <section id="recipe-section">
-      <h2 class="section-heading">Welcome to the Recipe Finder!</h2>
-      <input
-        aria-label="food-input"
-        id="food-input"
-        onchange="handleFoodChange()"
-      />
-      <button id="recipe-button" onclick="handleRecipeClick()">
-        Give me a recipe!
-      </button>
-      <a id="recipe-label"></a>
-    </section>
-    <script src="./main.js"></script>
+    <header class="hero-text">
+        <h1>IT'S ALL ABOUT</h1>
+        <h1 id="fancy-title">Recipes</h1>
+    </header>
+    <main>
+      <section id="recipe-section">
+        <h2 class="section-heading">SEARCH AN INGREDIENT</h2>
+        <P>
+          Pop your favourite ingredient into the search bar below and we'll give 
+          you a few recipe ideas to get you started on your culinary journey.
+        </P>
+        <input
+          aria-label="food-input"
+          id="food-input"
+          onchange="handleFoodChange()"
+        />
+        <button id="recipe-button" onclick="handleRecipeClick()">
+          Search
+        </button>
+        <a id="recipe-label"></a>
+      </section>
+
+      <div class="row">
+        <!-- First and featured recipe card -->
+        <section class="featured-recipe">
+          <img id="featured-recipe-image">
+          <h3 id="featured-recipe-title"></h3>
+          <h4 id="featured-recipe-author"></h4>
+          <button id="featured-recipe-button"></button>
+        </section>
+        <!-- Second recipe card -->
+        <section class="">
+          <img class="recipe-card" id="recipe-image-2">
+          <h3 id="recipe-title-2"></h3>
+          <h4 id="recipe-author-2"></h4>
+          <button id="recipe-button-2"></button>
+        </section>
+      </div>
+
+      <div class="row">
+        <!-- Third recipe card -->
+        <section class="recipe-card">
+          <img class="recipe-images" id="recipe-image-3">
+          <h3 id="recipe-title-3"></h3>
+          <h4 id="recipe-author-3"></h4>
+          <button id="recipe-button-3"></button>
+        </section>
+        <!-- Fourth recipe card -->
+        <section class="recipe-card">
+          <img class="recipe-images" id="recipe-image-4">
+          <h3 id="recipe-title-4"></h3>
+          <h4 id="recipe-author-4"></h4>
+          <button id="recipe-button-4"></button>
+        </section>
+        <!-- Fifth recipe card -->
+        <section class="recipe-card">
+          <img class="recipe-images" id="recipe-image-5">
+          <h3 id="recipe-title-5"></h3>
+          <h4 id="recipe-author-5"></h4>
+          <button id="recipe-button-5"></button>
+        </section>
+      </div>
+
+      <script src="./main.js"></script>
+    </main>
   </body>
 </html>
